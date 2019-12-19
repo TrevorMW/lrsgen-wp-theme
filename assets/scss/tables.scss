@@ -1,58 +1,91 @@
 @import 'variables';
 @import 'bourbon';
-
-table{
+table {
     display: table;
-    width:100%;
-    padding:0;
-    border-collapse:collapse
+    width: 100%;
+    padding: 0;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: capitalize;
+    font-weight: 300;
+    border: 1px solid #ccc;
 }
 
-tbody{
-
-}
-
-tfoot{
-
-}
-
-tr{
-    border-top:1px solid #ddd;
-
-    .panel &{
-        border-top:1px solid $sand;
+thead {
+    border-bottom: 1px solid #ccc;
+    th {
+        text-align: left;
+        background-color: #eee;
+        border-right: 1px solid #ccc;
     }
+}
 
-    &:first-child{
-        border:0;
+tbody {}
+
+tfoot {
+    clear: both;
+}
+
+tr {
+    border-top: 1px solid #ddd;
+    .panel & {
+        border-top: 1px solid $sand;
+    }
+    &:first-child {
+        border: 0;
     }
 }
 
 td,
-th{
-    padding:5px 10px;
-    text-align:left;
-}
-
-th{
-
-
-    tr &{
-        font-size:14px;
-        line-height:17px;
-        text-transform:capitalize;
-        font-weight:300;
-        text-align:right;
-        background-color:#eee;
-        width:33%;
-        border-right:1px solid #ddd;
+th {
+    padding: 5px 10px;
+    text-align: left;
+    &.tiny {
+        width: 40px;
+        max-width: 40px;
     }
-
-    .panel tr &{
-        border-right:1px solid $sand;
+    &.hotelDetails {
+        width: 250px;
+    }
+    &.hotelPhone {
+        width: 125px;
+    }
+    &.roomTypePrice {
+        width: 125px;
+        max-width: 125px;
     }
 }
 
-td{
-
+th {
+    .hasTable tr & {
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: capitalize;
+        font-weight: 300;
+        text-align: right;
+        background-color: #eee;
+        width: 33%;
+        border-right: 1px solid #ddd;
+    }
+    .panel tr & {
+        border-right: 1px solid $sand;
+    }
 }
+
+td {
+    border-right: 1px solid #ccc;
+    &.hotelDetails {}
+}
+
+table {
+    .hasTable & {
+        border: 0;
+        tr td {
+            border: 0;
+        }
+    }
+}
+
+.ratesTable {}

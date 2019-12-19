@@ -1,21 +1,23 @@
 @import 'variables';
 @import 'bourbon';
-
-.panel{
-    background-color:#fff;
+.panel {
+    background-color: #fff;
     @include boxShadow;
-    border:1px solid $sand;
+    border: 1px solid $sand;
 }
 
-.panelTitle{
-    padding:5px 12px;
-    border-bottom:1px solid $sand;
+.panelTitle {
+    padding: 12px;
+    border-bottom: 1px solid $sand;
 }
 
-.panelContent{
-    padding:12px;
-
-    &.hasTable{
-        padding:0;
+.panelContent {
+    padding: 12px;
+    &.hasTable {
+        padding: 0;
+    }
+    .shortPanel & {
+        max-height: 225px;
+        overflow-y: scroll;
     }
 }

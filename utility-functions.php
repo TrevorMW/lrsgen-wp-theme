@@ -199,6 +199,10 @@ function add_javascript()
 {
   $app_base = get_template_directory_uri() . '/assets/js/core';
 
+  if(is_page('rates')){
+    wp_enqueue_script( 'ratesTables', get_template_directory_uri() . '/assets/static/js/ratesTable.js?v='. time(), array( 'jquery' ), null, false );
+  }
+
   if (!is_admin()) {
     wp_enqueue_script(
       'jquery',
@@ -287,6 +291,8 @@ add_editor_style("/css/layout-style.css");
  *	ADD TINY IMAGE SIZE FOR ACF FIELDS, BETTER USABILITY
  */
 add_image_size('mini-thumbnail', 50, 50);
+
+add_image_size('hotel-thumbnail', 200, 200);
 
 
 /**

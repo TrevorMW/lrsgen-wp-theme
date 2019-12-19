@@ -23,7 +23,13 @@
 			</div>
 
 			<div class="tableCell fourFifths toolbar">
-				
+				<?php if( !is_front_page()){ ?>
+					<div class="utilityFuzzySearch">
+						<form class="inlineForm" data-fuzzy-search>
+							<input type="search" placeholder="Search <?php echo the_title()?>...">
+						</form>
+					</div>
+				<?php } ?>
 			</div>
 		</header>
 	</div>
@@ -44,18 +50,20 @@
 			</div>
 	
 			<div class="tableCell fourFifths rightColumn">
-				<div class="table subUtilityBar">
-					<div class="tableCell half">
-						<h2><?php echo $post->post_title; ?></h2>
+				<?php if( !is_front_page()){ ?>
+					<div class="table subUtilityBar">
+						<div class="tableCell half">
+							<h2><?php echo $post->post_title; ?></h2>
+						</div>
+						<div class="tableCell half">
+							<nav>
+								<ul>
+									<li><a href=""><i class="fa fa-th"></i></a></li>
+									<li><a href=""><i class="fa fa-list"></i></a></li>
+								</ul>
+							</nav>
+							
+						</div>
 					</div>
-					<div class="tableCell half">
-						<nav>
-							<ul>
-								<li><a href=""><i class="fa fa-th"></i></a></li>
-								<li><a href=""><i class="fa fa-list"></i></a></li>
-							</ul>
-						</nav>
-						<?php //echo $lrsgen->getUtilityBarContent($post->ID); ?>
-					</div>
-				</div>
+				<?php } ?>
 				

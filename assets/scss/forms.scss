@@ -1,110 +1,120 @@
 @import 'variables';
 @import 'bourbon';
-
-form{
-    text-align:left;
+form {
+    text-align: left;
+    &.inlineForm {
+        display: flex;
+    }
 }
 
-fieldset{
-    border:0;
-    padding:0;
-    margin:0;
-
-    & legend{
+fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    & legend {
         display: none;
     }
 }
 
-label{
+label {
     display: block;
-    padding:0 0 8px 0;
-    width:100%;
-    color:$darkgray;
-    font-size:14px;
-    line-height:22px;
-    font-weight:300px;
-
-    & mark{
-        color:$btn-hover;
+    padding: 0 0 8px 0;
+    width: 100%;
+    color: $darkgray;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300px;
+    & mark {
+        color: $btn-hover;
     }
 }
 
-[data-form-msg]{
+[data-form-msg] {
     position: relative;
     display: none;
-    width:100%;
-    text-align:left;
-    background-color:#ddd;
-    border-radius:3px;
-    color:#fff;
-    font-weight:300;
-    letter-spacing:1px;
-    font-size:14px;
-    line-height:14px;
-    -webkit-box-shadow: 0px 13px 25px -13px rgba(0,0,0,0.21);
-    -moz-box-shadow: 0px 13px 25px -13px rgba(0,0,0,0.21);
-    box-shadow: 0px 13px 25px -13px rgba(0,0,0,0.21);
-    margin-bottom:20px;
-
-    &:after{
+    width: 100%;
+    text-align: left;
+    background-color: #ddd;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 14px;
+    -webkit-box-shadow: 0px 13px 25px -13px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 13px 25px -13px rgba(0, 0, 0, 0.21);
+    box-shadow: 0px 13px 25px -13px rgba(0, 0, 0, 0.21);
+    margin-bottom: 20px;
+    &:after {
         position: absolute;
-        cursor:pointer;
-        content:"x";
-        color:#fff;
-        right:0px;
-        top:0px;
-        width:30px;
-        height:22px;
-        padding-top:7px;
-        text-align:center;
-        font-weight:500;
-        font-family:Arial, Helvetica, sans-serif;   
+        cursor: pointer;
+        content: "x";
+        color: #fff;
+        right: 0px;
+        top: 0px;
+        width: 30px;
+        height: 22px;
+        padding-top: 7px;
+        text-align: center;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
     }
-
-    &.active{
-        padding:8px 12px;
+    &.active {
+        padding: 8px 12px;
         display: block;
     }
-
-    &.error{
-        background-color:$paleRed;
+    &.error {
+        background-color: $paleRed;
     }
-
-    &.success{
-        background-color:$success;
+    &.success {
+        background-color: $success;
     }
-
-    &.info{
-        background-color:rgb(252, 200, 68);
+    &.info {
+        background-color: rgb(252, 200, 68);
     }
 }
 
-[data-forgot-password]{
+[data-forgot-password] {
     display: block;
-    color:$darkgray;
-    font-size:12px;
-    line-height:14px;
-    font-weight:300px;
-    margin-top:22px;
-    
-    &:hover{
-       color:$btn-hover; 
-
+    color: $darkgray;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300px;
+    margin-top: 22px;
+    &:hover {
+        color: $btn-hover;
     }
 }
 
 input,
 select,
-textarea{
+textarea {
     display: block;
-    width:100%;
-    margin-bottom:22px;
-    padding:10px 14px;
-    border-radius:2px;
-    border:1px solid #eee;
-    font-family:$base;
-
-    &:focus{
-        border-color:$paleRed;
+    width: 100%;
+    margin-bottom: 22px;
+    padding: 10px 14px;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    font-family: $base;
+    &:focus {
+        border-color: $paleRed;
+    }
+    .utilityFuzzySearch & {
+        border: 0;
+        height: 100%;
+        display: block;
+        width: 100%;
+        height: 49px;
+        margin: 0;
+        color: #fff;
+        padding: 12px 12px 12px 12px;
+        font-size: 18px;
+        background-color: rgba(255, 255, 255, 0.1);
+        &::placeholder {
+            color: #fff;
+        }
+        &:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
     }
 }

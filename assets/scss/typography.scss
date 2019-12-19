@@ -1,31 +1,45 @@
 @import 'variables';
 @import 'bourbon';
-
 li,
 a,
-a:visited
-p{
-  color:inherit;
-  line-height:inherit;
-  font-weight:inherit;
-  font-family:inherit;
+a:visited p {
+    color: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    font-family: inherit;
 }
 
-p{
-  margin:0;
-  padding:8px 0;
-
-  &:after{
-    @include clearfix;
-  }
+p {
+    margin: 0;
+    padding: 8px 0;
+    &:after {
+        @include clearfix;
+    }
 }
 
 a,
-a:visited{
-  @include transition( background-color .5s );
+a:visited {
+    @include transition( background-color .5s);
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family: $heading;
-  margin:0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+address,
+address span {
+    line-height: 18px;
+    font-size: 14px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-style: normal;
+    font-weight: 300
 }

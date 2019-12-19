@@ -11,10 +11,9 @@ get_header();
 the_post(); ?>
 
     <main>
-        <?php //echo $lrsgen->getMainContent($post->ID); ?>
         <div class="table">
             <div class="tableCell fourth">
-                <div class="panel">
+                <div class="panel shortPanel">
                     <div class="panelTitle"><h3>Stats</h3></div>
                     <div class="panelContent hasTable">
                         <table>
@@ -41,16 +40,80 @@ the_post(); ?>
                 </div>
             </div>
             <div class="tableCell fourth">
-                <div class="panel">
-                    <div class="panelTitle"><h3>Pending Transactions</h3></div>
-                    <div class="panelContent"></div>
+                <div class="panel shortPanel">
+                    <div class="panelTitle"><h3>Pending Reservations</h3></div>
+                    <div class="panelContent hasTable">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <a href=""><span>RSV-1493</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href=""><span>RSV-1497</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href=""><span>RSV-1503</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href=""><span>RSV-1511</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href=""><span>RSV-1511</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href=""><span>RSV-1511</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href=""><span>RSV-1511</span></a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <div class="tableCell half last">
-                <div class="panel">
-                    <div class="panelTitle"><h3>Current Rates:</h3></div>
+                <div class="panel shortPanel">
+                    <div class="panelTitle"><h3>Current Best Rates:</h3></div>
                     <div class="panelContent hasTable">
-                        rates table
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Charles Pinckney Inn</th>
+                                    <td>K $249.99 (2)<br />QQ $229.99 (6)<br />DD $189.99 (4)</td>
+                                </tr>
+                                <tr>
+                                    <th>Hampton Inn</th>
+                                    <td>QQ $149.99 (20)</td>
+                                </tr>
+                                <tr>
+                                    <th>Hampton Inn</th>
+                                    <td>QQ $149.99 (20)</td>
+                                </tr>
+                                <tr>
+                                    <th>Hampton Inn</th>
+                                    <td>QQ $149.99 (20)</td>
+                                </tr>
+                                <tr>
+                                    <th>Hampton Inn</th>
+                                    <td>QQ $149.99 (20)</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -60,7 +123,7 @@ the_post(); ?>
             <div class="tableCell third">
                 <div class="panel">
                     <div class="panelTitle"><h3>Popular Properties</h3></div>
-                    <div class="panelContent hasTable">
+                    <div class="panelContent">
                         data 
                     </div>
                 </div>
@@ -68,7 +131,7 @@ the_post(); ?>
             <div class="tableCell third">
                 <div class="panel">
                     <div class="panelTitle"><h3>Popular Properties</h3></div>
-                    <div class="panelContent hasTable">
+                    <div class="panelContent">
                         data 
                     </div>
                 </div>
@@ -76,7 +139,7 @@ the_post(); ?>
             <div class="tableCell third">
                 <div class="panel">
                     <div class="panelTitle"><h3>Popular Properties</h3></div>
-                    <div class="panelContent hasTable">
+                    <div class="panelContent ">
                         data 
                     </div>
                 </div>

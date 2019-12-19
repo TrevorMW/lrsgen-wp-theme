@@ -1,90 +1,74 @@
 @import 'variables';
 @import 'bourbon';
-
 #wpadminbar {
     display: none !important;
 }
 
-body{
-  border-top:1px solid #ddd;
-  position:relative;
+body {
+    border-top: 1px solid #ddd;
+    position: relative;
 }
 
-.wrapper{
+.wrapper {}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.container{
-  max-width:1200px;
-  margin: 0 auto;
-}
+.table {}
 
-.table{
-
-}
-
-.tableCell{
-  
-  main &{
-    vertical-align: top;
-    padding: 0 30px 30px 0;
-
-    &.last{
-      padding-right:0;
+.tableCell {
+    main & {
+        vertical-align: top;
+        padding: 0 30px 30px 0;
+        &.last {
+            padding-right: 0;
+        }
     }
-  }
 }
 
-header{
-
-  &.wrapper{
-    padding:0;
-    border-bottom:1px solid #ddd;
-  }
+header {
+    &.wrapper {
+        padding: 0;
+        border-bottom: 1px solid #ddd;
+    }
 }
 
-footer{
-  min-height:300px;
-
-  &.wrapper{
-    padding:15px 0;
-    @include background-image( linear-gradient( #eee, #fff ) );
-    border:0;
-    border-top:1px solid #ddd;
-  }
+footer {
+    min-height: 300px;
+    &.wrapper {
+        padding: 15px 0;
+        @include background-image( linear-gradient( #eee, #fff));
+        border: 0;
+        border-top: 1px solid #ddd;
+    }
 }
 
-main{
-  
+main {}
+
+.utilityFuzzySearch {
+    display: inline-block;
+    width: 300px;
+    border-right: 1px solid darken($crimson, 10%);
 }
 
-.subUtilityBar{
-  border-bottom:1px solid $sand;
-  padding:0 0 15px 0;
-  margin-bottom:20px;
+.subUtilityBar {
+    border-bottom: 1px solid $sand;
+    padding: 0 0 15px 0;
+    margin-bottom: 20px;
 }
-
 
 @import 'scaffolding';
-
 @import 'navigation';
-
 @import 'tables';
-
 @import 'forms';
-
 @import 'typography';
-
 @import 'buttons';
-
 @import 'components/_loader';
-
 @import 'components/_popup';
-
 @import 'components/_hero';
-
 @import 'components/_panel';
-
 @import 'components/_tabs';
-
+@import 'components/_hotel';
 @import 'utilities';
