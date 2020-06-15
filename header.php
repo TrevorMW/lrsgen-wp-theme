@@ -7,12 +7,13 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<title><?php echo site_global_description(); ?></title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/media/favicon.ico">
-<?php wp_head(); ?>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<title><?php echo site_global_description(); ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/assets/media/favicon.ico">
+	<?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
 
 	<div class="wrapper headerBar">
@@ -23,10 +24,10 @@
 			</div>
 
 			<div class="tableCell fourFifths toolbar">
-				<?php if( !is_front_page()){ ?>
+				<?php if( !is_front_page() && !is_single()){ ?>
 					<div class="utilityFuzzySearch">
 						<form class="inlineForm" data-fuzzy-search>
-							<input type="search" placeholder="Search <?php echo the_title()?>...">
+							<input type="search" placeholder="Search <?php echo the_title() ?>...">
 						</form>
 					</div>
 				<?php } ?>
@@ -36,7 +37,6 @@
 
 	<div class="wrapper mainDashboard">
 		<div class="table">
-
 			<div class="tableCell fifth leftColumn">
 				<nav class="main-nav">
 					<?php wp_nav_menu(array(

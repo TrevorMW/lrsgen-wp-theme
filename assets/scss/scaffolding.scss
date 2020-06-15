@@ -91,14 +91,12 @@ img {
 }
 
 .logoBox {
-    height: 5vh;
+    padding: 0 20px;
+    height: 4vh;
     color: #fff;
-    text-align: center;
+    text-align: right;
     background-color: $black;
-}
 
-.logoBox {
-    padding: 8px;
     & img {
         height: 26px;
         display: inline-block;
@@ -106,6 +104,7 @@ img {
         width: auto;
         margin: -6px 5px 0 0
     }
+    
     & h1 {
         display: inline-block;
         vertical-align: middle;
